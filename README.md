@@ -1,3 +1,3 @@
-# AWS-Dining_Concierge-Chatbot
+# AWS Dining Concierge Chatbot
 
 ## Details about the project
