@@ -9,6 +9,7 @@
 
 - This is a project for cloud computing course at NYU, Fall 2021 term.
 - The objective is, the user chats with the bot and gets 3 restaurant suggestions of the same cuisine.
+- Cuisines available - Korean, Chinese, Mexican, American, Pizza, Healthy, Italian, Brunch.
 - The user has to give in the details such as area, cuisine, number of people, date, time, and contact (e-mail/phone number).
 - The bot will appropriately mail the user suggestions of the restaurants.
 
@@ -20,3 +21,4 @@
 - After this step, chat with the bot one more time.
 - You will now get a suggestion of resturants on your mail.
 - **NOTE:** This process must be done for new E-mail ID. If the e-mail has been used before, verification is not needed, suggestion will be mailed directly.
+- The bot only accepts future dates like tomorrow. (today, yesterday or any past date will not give results.)
