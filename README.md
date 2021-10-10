@@ -5,7 +5,7 @@
 
 ## Project description
 
-**Visit : https://s3.console.aws.amazon.com/s3/buckets/diningnyu?region=us-east-1&tab=properties**
+**Visit : http://diningnyu.s3-website-us-east-1.amazonaws.com/**
 
 - This is a project for cloud computing course at NYU, Fall 2021 term.
 - The objective is, the user chats with the bot and gets 3 restaurant suggestions of the same cuisine.
