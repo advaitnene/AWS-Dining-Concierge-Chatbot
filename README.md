@@ -9,7 +9,7 @@
 
 - This is a project for cloud computing course at NYU, Fall 2021 term.
 - The objective is, the user chats with the bot and gets 3 restaurant suggestions of the same cuisine.
-- The user has to give in the details such as area, cuisine, number of people, date, time, and contact (e-mail/phone number.).
+- The user has to give in the details such as area, cuisine, number of people, date, time, and contact (e-mail/phone number).
 - The bot will appropriately mail the user suggestions of the restaurants.
 
 ### Instructions
