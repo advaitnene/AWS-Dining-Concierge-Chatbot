@@ -1,5 +1,4 @@
-
-import json, boto3
+import json, boto3, random
 import requests
 from requests_aws4auth import AWS4Auth
 
@@ -68,7 +67,7 @@ def lambda_handler(event, context):
     #sqs = boto3.client('sqs')
     #queue_url = 'https://sqs.us-east-1.amazonaws.com/837466521382/Q1'
     # The OpenSearch domain endpoint with https://
-    host = 'https://search-restaurants-yweibjjzcdubo3tnlsc6ey5wne.us-east-1.es.amazonaws.com'
+    host = 'https://search-restaurants-final-pa3vyjvbsgxfiftjfzl4ord3g4.us-east-1.es.amazonaws.com'
     index = 'restaurants'
     url = host + '/' + index + '/_search'
     
@@ -80,7 +79,7 @@ def lambda_handler(event, context):
     # Put the user query into the query DSL for more accurate search results.
     # Note that certain fields are boosted (^).
     query = {
-        "size": 3,
+        "size": 25,
         "query": {
             "multi_match": {
                 "query": qry,
@@ -111,9 +110,21 @@ def lambda_handler(event, context):
         restIdList.append(name)
     print("restIdList is ", restIdList)
     
+    finalList = []
+    finalList = random.sample(restIdList, 3)
+    print('Final list is ', finalList)
+    """
+    #print(response)
+    restaurantIdList = []
+    restaurantIdList = random.choices(restIdList, k=3)
+    restaurantIdList = [restaurant['_id'] for restaurant in restaurantIdList]
+    print("RestaurantID List is ",restaurantIdList)
+    """
+    
+    
     dynamoClient = boto3.client('dynamodb')
-    for restaurantId in restIdList:
-        res = dynamoClient.get_item(Key={'RestaurantID': { 'S': restaurantId } }, TableName='yelp_restaurants')
+    for restaurantId in finalList:
+        res = dynamoClient.get_item(Key={'RestaurantID': { 'S': restaurantId } }, TableName='yelp_restaurants_final')
         result_data.append(res)
     
     print("Result data is ", result_data)

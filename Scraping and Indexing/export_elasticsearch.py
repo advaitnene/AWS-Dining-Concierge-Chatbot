@@ -6,7 +6,7 @@ from elasticsearch import Elasticsearch, RequestsHttpConnection
 import csv
 from io import BytesIO
 
-host = 'search-restaurants-zecsvug74rovj4s2hvd5by3g4u.us-east-1.es.amazonaws.com' 
+host = 'search-restaurants-final-pa3vyjvbsgxfiftjfzl4ord3g4.us-east-1.es.amazonaws.com/' 
 
 es = Elasticsearch(
     hosts = [{'host': host, 'port': 443}],
@@ -15,7 +15,7 @@ es = Elasticsearch(
     connection_class = RequestsHttpConnection
 )
 print(es)
-with open('es_indices.csv', newline='') as f:
+with open('final_indices.csv', newline='') as f:
     reader = csv.reader(f)
     restaurants = list(reader)
 

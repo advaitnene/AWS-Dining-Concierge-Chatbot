@@ -2,7 +2,7 @@ import pandas
 import ipdb
 import json
 
-old = pandas.read_csv('final_results.csv')
+old = pandas.read_csv('final_indices.csv')
 
 new = []
 for i in range(len(old)):

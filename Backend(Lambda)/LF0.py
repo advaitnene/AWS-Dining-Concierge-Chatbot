@@ -1,4 +1,3 @@
-
 import json, boto3
 
 def lambda_handler(event, context):
