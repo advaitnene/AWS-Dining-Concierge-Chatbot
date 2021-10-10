@@ -8,8 +8,8 @@
 **Visit : https://s3.console.aws.amazon.com/s3/buckets/diningnyu?region=us-east-1&tab=properties**
 
 - This is a project for cloud computing course at NYU, Fall 2021 term.
-- The objective is, the user chats with the bot and gets 3 restuarnt suggestions of the same cuisine.
-- The user has to give in the details such as area, cuisine, number of people, date, time, and contact (e-mail/phone no.).
+- The objective is, the user chats with the bot and gets 3 restaurant suggestions of the same cuisine.
+- The user has to give in the details such as area, cuisine, number of people, date, time, and contact (e-mail/phone number.).
 - The bot will appropriately mail the user suggestions of the restaurants.
 
 ### Instructions
